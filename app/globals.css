@@ -1,0 +1,108 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: #0A0A0A;
+    color: #F4F4F4;
+  }
+
+  ::selection {
+    background-color: #B8A88A;
+    color: #0A0A0A;
+  }
+}
+
+@layer components {
+  .rule {
+    @apply border-t border-blade-graphite;
+  }
+
+  .rule-light {
+    @apply border-t border-blade-steel;
+  }
+
+  .section-label {
+    @apply text-blade-silver tracking-ultra uppercase text-xs font-body font-medium;
+  }
+
+  .display-heading {
+    @apply font-display text-5xl md:text-7xl lg:text-8xl leading-none tracking-tight text-blade-white;
+  }
+
+  .sub-heading {
+    @apply font-display text-3xl md:text-4xl leading-tight text-blade-white;
+  }
+
+  .body-large {
+    @apply text-lg md:text-xl text-blade-mist leading-relaxed font-body font-light;
+  }
+
+  .body-copy {
+    @apply text-base text-blade-silver leading-relaxed font-body;
+  }
+
+  .cta-primary {
+    @apply inline-block px-8 py-4 bg-blade-white text-blade-black text-sm font-medium tracking-widest uppercase
+           hover:bg-blade-accent transition-colors duration-300 cursor-pointer;
+  }
+
+  .cta-secondary {
+    @apply inline-block px-8 py-4 border border-blade-steel text-blade-silver text-sm font-medium tracking-widest uppercase
+           hover:border-blade-white hover:text-blade-white transition-colors duration-300 cursor-pointer;
+  }
+
+  .accent-line {
+    @apply w-12 h-px bg-blade-accent;
+  }
+}
+
+/* Smooth fade-in for page loads */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-up {
+  animation: fadeUp 0.8s ease-out forwards;
+}
+
+.fade-up-delay-1 {
+  animation: fadeUp 0.8s ease-out 0.15s forwards;
+  opacity: 0;
+}
+
+.fade-up-delay-2 {
+  animation: fadeUp 0.8s ease-out 0.3s forwards;
+  opacity: 0;
+}
+
+.fade-up-delay-3 {
+  animation: fadeUp 0.8s ease-out 0.45s forwards;
+  opacity: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .fade-up,
+  .fade-up-delay-1,
+  .fade-up-delay-2,
+  .fade-up-delay-3 {
+    animation: none;
+    opacity: 1;
+  }
+}
