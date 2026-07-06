@@ -24,7 +24,7 @@ export default function Nav() {
           href="/"
           className="font-display text-xl md:text-2xl tracking-widest text-blade-white hover:text-blade-accent transition-colors duration-300"
         >
-          BLADE
+          <img src="/logo.png" alt="Blade Enterprises" style={{ height: "36px" }} />
         </Link>
 
         {/* Desktop Nav */}
