@@ -18,13 +18,13 @@ export default function Nav() {
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-blade-black/95 backdrop-blur-sm border-b border-blade-graphite">
-      <div className="max-w-7xl mx-auto px-6 lg:px-12 flex items-center justify-between h-16 md:h-20">
+      <div className="max-w-7xl mx-auto px-6 lg:px-12 flex items-center justify-between h-20 md:h-24">
         {/* Logo */}
         <Link
           href="/"
           className="font-display text-xl md:text-2xl tracking-widest text-blade-white hover:text-blade-accent transition-colors duration-300"
         >
-          <img src="/logo.png" alt="Blade Enterprises" style={{ height: "72px" }} />
+          <img src="/logo.png" alt="Blade Enterprises" style={{ height: "56px" }} />
         </Link>
 
         {/* Desktop Nav */}
